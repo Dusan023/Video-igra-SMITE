@@ -1,0 +1,80 @@
+#header {
+    background: url('images/header.jpg');
+    background-size: 100% auto; /*sirina je 100% a visina auto -> odrzava se odnos*/
+    width: 100%;
+    height: 20vw; /*20% sirine vidljivog dela stranice*/
+    overflow: hidden; /*sakrij sve sto prelazi granice ovog elementa*/
+}
+
+#header-god-name {
+    font-size: 80px;
+    font-family: var(--bold);
+    margin-left: 20px;
+}
+
+#header-god-title {
+    font-size: 30px;
+    font-family: var(--bold);
+    color: var(--gold);
+    margin-left: 20px;
+}
+
+#container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: var(--bg);
+    width: 1000px;
+}
+
+.ability {
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: var(--bold);
+    cursor: pointer;
+    transition: background-color .1s;
+    display: inline-flex; /*flex koji zauzima samo prostor sto mu je potreban*/
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.ability:not(.ability-selected):hover {
+    background-color: #20233a;
+}
+
+.ability-selected {
+    background-color: var(--menu-bg);
+}
+
+.ability-number {
+    font-size: 18px;
+}
+
+.ability-name {
+    color: var(--gold);
+}
+
+#name {
+    font-family: var(--bold);
+    font-size: 26px;
+    padding: 10px;
+}
+
+.description {
+    font-family: var(--font);
+    display: none;
+}
+
+.description > td {
+    padding: 0 10px;
+}
+
+.description-selected {
+    display: table-row; /*<tr>*/
+}

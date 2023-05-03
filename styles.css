@@ -1,0 +1,198 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*horizontalno*/
+    margin-top: 50px; /*pomeranje na dole za 50px prvog elementa*/
+    gap: 80px; /*razmak izmedju elemenata flex-a*/
+}
+
+#title {
+    font-size: 100px;
+    font-family: var(--bold);
+    transition: color .4s;
+}
+
+#gods {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center; /*horizontalno*/
+}
+
+.god-holder {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    perspective: 800px; /*za 3d efekat kartice*/
+}
+
+.god-holder:hover .god-card {
+    transform: rotateX(30deg);
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .7); /*senka ispod kartice*/
+}
+
+.god-holder:hover .god-card::after {
+    opacity: 1;
+}
+
+.god-holder:hover .god-png {
+    opacity: 1;
+    bottom: 110px;
+}
+
+.god-holder:hover .god-name {
+    bottom: 85px;
+}
+
+.ah-puch-card {
+    background: linear-gradient(transparent 50%, black), url('images/cards/standard ah puch.jpg');
+}
+
+.bakasura-card {
+    background: linear-gradient(transparent 50%, black), url('images/cards/standard bakasura.jpg');
+}
+
+.chernobog-card {
+    background: linear-gradient(transparent 50%, black), url('images/cards/standard chernobog.jpg');
+}
+
+.fenrir-card {
+    background: linear-gradient(transparent 50%, black), url('images/cards/standard fenrir.jpg');
+}
+
+.thor-card {
+    background: linear-gradient(transparent 50%, black), url('images/cards/standard thor.jpg');
+}
+
+.god-card {
+    background-size: 318.75px 425px; 
+    background-position: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px; /*zakrivljenje uglova kartice*/
+    transition: .4s;
+    pointer-events: none;
+}
+
+.god-card::after {
+    content: ''; /*da bi ::after ili ::before element mogao da se koristi*/
+    background: linear-gradient(black, transparent 50%); /*gradijent od 0% do 50% elementa*/
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    opacity: 0; /*ne vidi se ali zauzima prostor*/
+    transition: opacity .3s;
+}
+
+.god-png {
+    height: 400px;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%); /*pomeranje za 50% (od sopstvene sirine) ulevo*/
+    opacity: 0;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.bakasura-png {
+    background-image: url('images/pngs/bakasura.png');
+    width: 350px; /*stavljao sam razlicite sirine da bi se png svakog lika dobro video posto su neki siri*/
+}
+
+.chernobog-png {
+    background-image: url('images/pngs/chernobog.png');
+    width: 500px;
+}
+
+.fenrir-png {
+    background-image: url('images/pngs/fenrir.png');
+    width: 700px;
+}
+
+.thor-png {
+    background-image: url('images/pngs/thor.png');
+    width: 700px;
+}
+
+.ah-puch-png {
+    background-image: url('images/pngs/ah puch.png');
+    width: 400px;
+}
+
+.god-name {
+    font-size: 40px;
+    font-family: var(--bold);
+    color: var(--color); /*boja slova*/
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s;
+    white-space: nowrap; /*sav tekst je u jednom redu; morao sam da dodam jer je PUCH od AH PUCH prelazilo u novi red*/
+}
+
+#box {
+    display: inline-block;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #2a271d;
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    align-items: center;
+    padding: 10px; /*unutrasnje margine; sa svih strana 10px*/
+    box-sizing: border-box; /*da padding i border ne uticu na podesene dimenzije - u ovom slucaju nece biti sirine 422px nego ostaje 400px*/
+    gap: 5px;
+}
+
+#box:hover {
+    box-shadow: 0 10px 20px 0 black;
+}
+
+input[type="text"] {
+    border: none;
+    border-radius: 5px;
+    padding: 2px 5px; /*gore i dole 2px levo i desno 5px; isto sto i 2px 5px 2px 5px (gore desno dole levo)*/
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--menu-bg);
+    outline: none;
+    color: var(--color);
+    font-family: var(--font);
+    font-size: 22px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+label {
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+.button {
+    font-family: var(--font);
+    font-size: 22px;
+    cursor: pointer;
+    background-color: #0A223B;
+    padding: 2px 8px;
+    border-radius: 5px;
+    transition: color .1s;
+}
+
+.button:hover {
+    color: var(--gold);
+}

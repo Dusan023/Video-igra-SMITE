@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'bold italic';
+    src: url('fonts/OpenSans-ExtraBoldItalic.ttf');
+}
+
+@font-face {
+    font-family: 'regular';
+    src: url('fonts/OpenSans_SemiCondensed-Regular.ttf')
+}
+
+:root { /*ovde se cuvaju varijable; imenuvanje i lako menjanje*/
+    --font: 'regular';
+    --bold: 'bold italic';
+    --gold: #9F9160;
+    --bg: #071425;
+    --menu-bg: #05111e;
+    --color: rgb(236, 236, 236);
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    overflow-x: hidden;
+    color: var(--color);
+    user-select: none; /*da elementi ne bi mogli da se vuku i onda ne izgleda tako lepo; tekst takodje ne moze da se slektuje*/
+    transition: background-color .4s;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    width: 100%;
+    background-color: var(--menu-bg);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#menu-left {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 20px;
+}
+
+#menu > a {
+    height: 100%;
+}
+
+#logo {
+    height: calc(100% - 12px);
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.menu-item {
+    font-family: var(--font);
+    color: var(--color);
+    text-decoration: none;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: color .1s;
+}
+
+a:link {
+    text-decoration: none; /*da ne bi bilo text-decoration: underline, sto je default za linkove*/
+    cursor: default;
+}
+
+.menu-item:hover {
+    color: var(--gold);
+}
+
+#toggle {
+    background-color: #0c2b4e;
+    width: 64px;
+    height: 34px;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+#toggle-circle {
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--bg);
+    transition: .4s;
+}
+
+.light-on {
+    transform: translateX(100%);
+    background-color: var(--gold) !important;
+}
+
+.light-bg {
+    background-color: white;
+}
+
+.light-bg #title {
+    color: black;
+}
