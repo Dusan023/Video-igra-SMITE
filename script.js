@@ -20,7 +20,7 @@ const Proveri = () => {
         NevalidniEmail()
         return
     }
-    alert('Uspesno ste se prijavili. Na email će Vam stizati novosti o igri.') // \' da bi mogao da prikaze apostrof izmedju ''
+    alert('Uspesno ste se prijavili. Na email će Vam stizati novosti o igri.')
 }
 
 nadji('prijavi-se').onclick = Proveri
