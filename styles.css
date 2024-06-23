@@ -38,23 +38,23 @@
     bottom: 85px;
 }
 
-.ah-puch-card {
+.ah-puc-kartica {
     background: linear-gradient(transparent 50%, black), url('images/cards/standard ah puch.jpg');
 }
 
-.bakasura-card {
+.bakasura-kartica {
     background: linear-gradient(transparent 50%, black), url('images/cards/standard bakasura.jpg');
 }
 
-.chernobog-card {
+.cernobog-kartica {
     background: linear-gradient(transparent 50%, black), url('images/cards/standard chernobog.jpg');
 }
 
-.fenrir-card {
+.fenrir-kartica {
     background: linear-gradient(transparent 50%, black), url('images/cards/standard fenrir.jpg');
 }
 
-.thor-card {
+.tor-kartica {
     background: linear-gradient(transparent 50%, black), url('images/cards/standard thor.jpg');
 }
 
@@ -100,7 +100,7 @@
     width: 350px;
 }
 
-.chernobog-png {
+.cernobog-png {
     background-image: url('images/pngs/chernobog.png');
     width: 500px;
 }
@@ -110,12 +110,12 @@
     width: 700px;
 }
 
-.thor-png {
+.tor-png {
     background-image: url('images/pngs/thor.png');
     width: 700px;
 }
 
-.ah-puch-png {
+.ah-puc-png {
     background-image: url('images/pngs/ah puch.png');
     width: 400px;
 }

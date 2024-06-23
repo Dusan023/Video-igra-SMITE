@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chernobog</title>
+    <title>Černobog</title>
     <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="styles1.css">
     <link rel="shortcut icon" sizes="1024x1024" href="favicon.webp" data-react-helmet="true">
@@ -23,6 +23,7 @@
             <div class="meni-stavka">SKINI</div>
             <div class="meni-stavka"><a href="o-nama.html">O NAMA</a></div>
             <div class="meni-stavka"><a href="kontakt.html">KONTAKT</a></div>
+            <img src="images/transparentni-logo.png">
         </div>
         <div id="ukljuci-iskljuci">
             <div id="ukljuci-iskljuci-kruzic"></div>
@@ -30,8 +31,8 @@
     </div>
 
     <div id="zaglavlje">
-        <div id="zaglavlje-ime-boga">CHERNOBOG</div>
-        <div id="zaglavlje-naslov-boga">LORD OF DARKNESS</div>
+        <div id="zaglavlje-ime-boga">ČERNOBOG</div>
+        <div id="zaglavlje-naslov-boga">GOSPODAR TAME</div>
     </div>
 
     <div id="kontejner">
@@ -39,28 +40,28 @@
             <tr>
                 <td class="sposobnost izabrana-sposobnost">
                     <img src="images/sposobnosti/0.jpg" draggable="false">
-                    <div class="broj-sposobnosti">PASSIVE</div>
-                    <div class="ime-sposobnosti">Heart of Cold</div>
+                    <div class="broj-sposobnosti">PASIVNA</div>
+                    <div class="ime-sposobnosti">Srce od leda</div>
                 </td>
                 <td class="sposobnost">
                     <img src="images/sposobnosti/1.jpg" draggable="false">
                     <div class="broj-sposobnosti">1</div>
-                    <div class="ime-sposobnosti">Crystallized Curses</div>
+                    <div class="ime-sposobnosti">Kristalizovane kletve</div>
                 </td>
                 <td class="sposobnost">
                     <img src="images/sposobnosti/2.jpg" draggable="false">
                     <div class="broj-sposobnosti">2 </div>
-                    <div class="ime-sposobnosti">Vicious Barrage</div>
+                    <div class="ime-sposobnosti">Zlobna baraža</div>
                 </td>
                 <td class="sposobnost">
                     <img src="images/sposobnosti/3.jpg" draggable="false">
                     <div class="broj-sposobnosti">3</div>
-                    <div class="ime-sposobnosti">Into Darkness</div>
+                    <div class="ime-sposobnosti">U tamu</div>
                 </td>
                 <td class="sposobnost">
                     <img src="images/sposobnosti/4.jpg" draggable="false">
                     <div class="broj-sposobnosti">4</div>
-                    <div class="ime-sposobnosti">Living Nightmare</div>
+                    <div class="ime-sposobnosti">Živa noćna mora</div>
                 </td>
             </tr>
             <tr>
@@ -69,81 +70,97 @@
             <tr class="opis">
                 <td colspan="5">
                     <p>
-                        Every successful Basic Attack impales the enemy with a brittle crystal. Upon reaching 3 stacks
+                        <!-- Every successful Basic Attack impales the enemy with a brittle crystal. Upon reaching 3 stacks
                         of Heart of Cold, the enemy explodes for extra damage in an area around them (This damage does
-                        not trigger Item effects).
+                        not trigger Item effects). -->
+                        Svaki uspešan osnovni napad probada neprijatelja krhkim kristalom. Kada se nakupi 3 sloja Srca od leda, 
+                        neprijatelj eksplodira nanoseći dodatnu štetu u oblasti oko sebe (ova šteta ne aktivira efekte predmeta).
                     </p>
                     <ul>
-                        <li>Damage: 20% + (1% per level) of your total Basic Attack Power</li>
-                        <li>Duration: 5s</li>
+                        <li>Šteta: 20% + (1% po nivou) od tvoje ukupne moći za osnovne napade</li>
+                        <li>Trajanje: 5s</li>
                     </ul>
                 </td>
             </tr>
             <tr class="opis">
                 <td colspan="5">
                     <p>
-                        Chernobog conjures a large crystal of curses and hurls it at the target location dealing damage
+                        <!-- Chernobog conjures a large crystal of curses and hurls it at the target location dealing damage
                         on
                         landing. After several seconds the crystalline curses explode dealing damage again and rooting
                         any
-                        enemy in the area. The crystal can be detonated early by firing at it with Vicious Barrage.
+                        enemy in the area. The crystal can be detonated early by firing at it with Vicious Barrage. -->
+                        Černobog priziva veliki kristal prokletstava i baca ga na ciljno mesto nanoseći štetu prilikom sletanja. 
+                        Nakon nekoliko sekundi kristalne kletve eksplodiraju, nanoseći dodatnu štetu i zaustavljajući sve neprijatelje u tom području. 
+                        Kristal se može detonirati ranije pucanjem na njega pomoću Zlobne baraže.
                     </p>
                     <ul>
-                        <li>Damage: 70/95/120/145/170 (+80% of your physical power)</li>
-                        <li>Detonation Damage: 40/70/100/130/160 (+70% of your physical power)</li>
-                        <li>Root: 1s</li>
-                        <li>Detonation Duration: 3s</li>
+                        <li>Šteta: 70/95/120/145/170 (+80% od tvoje fizičke moći)</li>
+                        <li>Šteta detoniranja: 40/70/100/130/160 (+70% od tvoje fizičke moći)</li>
+                        <li>Zaustavljanje: 1s</li>
+                        <li>Trajanje detonacije: 3s</li>
                     </ul>
                 </td>
             </tr>
             <tr class="opis">
                 <td colspan="5">
                     <p>
-                        Chernobog fires an enlarged crystal shard that can pierce enemies and deals damage like a Basic
+                        <!-- Chernobog fires an enlarged crystal shard that can pierce enemies and deals damage like a Basic
                         Attack. This applies a single stack of Heart of Cold to all enemies it passes through and
                         instantly
                         detonates Crystallized Curses. After firing, Chernobog gains increased Attack Speed for several
-                        seconds.
+                        seconds. -->
+                        Černobog ispaljuje povećanu kristalnu krhotinu koja može probiti neprijatelje i nanosi štetu kao Osnovni Napad. 
+                        Ovo primenjuje jedan sloj Srca od leda na sve neprijatelje kroz koje prođe i trenutno detonira Kristalizovane kletve. 
+                        Nakon ispaljivanja, Černobog dobija povećanu brzinu napada na nekoliko sekundi.
                     </p>
                     <ul>
-                        <li>Attack Speed: 40/45/50/55/60%</li>
-                        <li>Duration: 3/3.5/4/4.5/5s</li>
+                        <li>Brzina napada: 40/45/50/55/60%</li>
+                        <li>Trajanje: 3/3.5/4/4.5/5s</li>
                     </ul>
                 </td>
             </tr>
             <tr class="opis">
                 <td colspan="5">
                     <p>
-                        Chernobog dashes forward, dealing damage and slowing any enemy he collides with for 2s. If
+                        <!-- Chernobog dashes forward, dealing damage and slowing any enemy he collides with for 2s. If
                         Chernobog
                         comes in contact with a wall, he briefly enters it as a shadow, becoming untargetable and immune
                         to
                         damage for up to 3s. Chernobog can leave the wall early by dashing or just stepping out of the
                         wall.
-                        If he remains for the full duration, Chernobog will automatically dash out as his time expires.
+                        If he remains for the full duration, Chernobog will automatically dash out as his time expires. -->
+                        Černobog juri napred, nanoseći štetu i usporavajući svakog neprijatelja s kojim se sudari na 2 sekunde. 
+                        Ako Černobog dođe u kontakt sa zidom, kratko ulazi u njega kao senka, postajući nemoguć za ciljanje i imun na 
+                        štetu do 3 sekunde. Černobog može napustiti zid ranije jurišom ili jednostavno izlaskom iz zida. 
+                        Ako ostane celu predviđenu dužinu, Černobog će automatski jurnuti napolje kada mu istekne vreme.
                     </p>
                     <ul>
-                        <li>Damage: 60/75/90/105/120 (+45% of your physical power)</li>
-                        <li>Slow: 25%</li>
+                        <li>Šteta: 60/75/90/105/120 (+45% od tvoje fizičke moći)</li>
+                        <li>Usporenje: 25%</li>
                     </ul>
                 </td>
             </tr>
             <tr class="opis">
                 <td colspan="5">
                     <p>
-                        During a brief channeling period, Chernobog summons shadows at the location of all enemies that
+                        <!-- During a brief channeling period, Chernobog summons shadows at the location of all enemies that
                         last
                         for 8s and apply a short stacking Slow. Chernobog can select any of his shadow clones to fly
                         towards. Once he reaches the location he takes the place of his shadow, refreshing his
                         cooldowns, as
-                        well as temporarily obtaining damage mitigations and extra movement speed.
+                        well as temporarily obtaining damage mitigations and extra movement speed. -->
+                        Tokom kratkog perioda pripremanja, Černobog priziva senke na lokaciji svih neprijatelja koje traju 8 sekundi i 
+                        primenjuju kratko nagomilavanje usporavanja. Černobog može odabrati bilo koju od svojih senki ka kojoj će poleteti. 
+                        Kada stigne na tu lokaciju, zauzima mesto svoje senke, osvežava svoje sposobnosti, te privremeno dobija smanjenje 
+                        štete i povećanu brzinu kretanja.
                     </p>
                     <ul>
-                        <li>Buff Duration: 6s</li>
-                        <li>Damage Mitigation: 10/12.5/15/17.5/20%</li>
-                        <li>Movement Speed: 25%</li>
-                        <li>Shadow Slow: 4% Stacking 3 times</li>
-                        <li>Shadow Clone Speed: 365/380/395/410/425</li>
+                        <li>Trajanje pojačanja: 6s</li>
+                        <li>Smanjenje štete: 10/12.5/15/17.5/20%</li>
+                        <li>Brzina: 25%</li>
+                        <li>Usporednje senki: 4% stekuje se do 3 puta</li>
+                        <li>Brzina senki: 365/380/395/410/425</li>
                     </ul>
                 </td>
             </tr>

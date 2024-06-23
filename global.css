@@ -41,6 +41,7 @@ body {
 #levi-meni {
     display: flex;
     flex-direction: row;
+    align-items: center;
     height: 100%;
     gap: 20px;
 }
