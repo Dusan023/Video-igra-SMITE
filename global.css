@@ -8,44 +8,50 @@
     src: url('fonts/OpenSans_SemiCondensed-Regular.ttf')
 }
 
-:root { /*ovde se cuvaju varijable; imenuvanje i lako menjanje*/
+:root {
+    /*ovde se cuvaju varijable; imenuvanje i lako menjanje*/
     --font: 'regular';
-    --bold: 'bold italic';
-    --gold: #9F9160;
-    --bg: #071425;
-    --menu-bg: #05111e;
-    --color: rgb(236, 236, 236);
+    --zadebljanje: 'bold italic';
+    --zlatna: #9F9160;
+    --pozadina: #071425;
+    --meni-pozadina: #05111e;
+    --boja: rgb(236, 236, 236);
 }
 
 body {
-    background-color: var(--bg);
+    background-color: var(--pozadina);
     margin: 0;
     overflow-x: hidden;
-    color: var(--color);
-    user-select: none; /*da elementi ne bi mogli da se vuku i onda ne izgleda tako lepo; tekst takodje ne moze da se slektuje*/
+    color: var(--boja);
+    user-select: none;
+    /*da elementi ne bi mogli da se vuku i onda ne izgleda tako lepo; tekst takodje ne moze da se slektuje*/
     transition: background-color .4s;
 }
 
-#menu {
+#meni {
     display: flex;
     flex-direction: row;
     height: 50px;
     width: 100%;
-    background-color: var(--menu-bg);
+    background-color: var(--meni-pozadina);
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     box-sizing: border-box;
 }
 
-#menu-left {
+#levi-meni {
     display: flex;
     flex-direction: row;
     height: 100%;
     gap: 20px;
 }
 
-#menu > a {
+#levi-meni img {
+    height: 40px;
+}
+
+#meni>a {
     height: 100%;
 }
 
@@ -55,27 +61,40 @@ body {
     cursor: pointer;
 }
 
-.menu-item {
+.meni-stavka {
     font-family: var(--font);
-    color: var(--color);
+    color: var(--boja);
     text-decoration: none;
-    cursor: pointer;
     height: 100%;
     display: flex;
     align-items: center;
     transition: color .1s;
 }
 
+.meni-stavka a {
+    color: var(--boja);
+    /* bela boja za linkove gggggggg*/
+    text-decoration: none;
+}
+
+.meni-stavka a:visited {
+    color: var(--boja);
+    /* bela boja za posećene linkovegggggggggg */
+}
+
 a:link {
-    text-decoration: none; /*da ne bi bilo text-decoration: underline, sto je default za linkove*/
+    text-decoration: none;
+    /*da ne bi bilo text-decoration: underline, sto je default za linkove*/
     cursor: default;
 }
 
-.menu-item:hover {
-    color: var(--gold);
+.meni-stavka a:hover,
+.meni-stavka:hover {
+    color: var(--zlatna);
+    cursor: pointer;
 }
 
-#toggle {
+#ukljuci-iskljuci {
     background-color: #0c2b4e;
     width: 64px;
     height: 34px;
@@ -85,23 +104,45 @@ a:link {
     box-sizing: border-box;
 }
 
-#toggle-circle {
+#ukljuci-iskljuci-kruzic {
     width: 50%;
     height: 100%;
     border-radius: 50%;
-    background-color: var(--bg);
+    background-color: var(--pozadina);
     transition: .4s;
 }
 
-.light-on {
+.svetlo-ukljuceno {
     transform: translateX(100%);
-    background-color: var(--gold) !important;
+    background-color: var(--zlatna) !important;
 }
 
-.light-bg {
+.svetla-pozadina {
     background-color: white;
 }
 
-.light-bg #title {
+#naslov {
+    font-size: 75px;
+    font-family: var(--zadebljanje);
+}
+
+.svetla-pozadina #naslov {
     color: black;
+}
+
+@media only screen and (max-width: 500px) {
+    #meni {
+        flex-direction: column;
+        height: 300px;
+        padding: 20px 0;
+        font-size: 20px;
+    }
+    #levi-meni {
+        flex-direction: column;
+        height: auto;
+        gap: 0;
+    }
+    #ukljuci-iskljuci {
+        display: none;
+    }
 }

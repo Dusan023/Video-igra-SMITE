@@ -1,25 +1,25 @@
-#header {
-    background: url('images/header.jpg');
+#zaglavlje {
+    background: url('images/zaglavlje.jpg');
     background-size: 100% auto; /*sirina je 100% a visina auto -> odrzava se odnos*/
     width: 100%;
     height: 20vw; /*20% sirine vidljivog dela stranice*/
     overflow: hidden; /*sakrij sve sto prelazi granice ovog elementa*/
 }
 
-#header-god-name {
+#zaglavlje-ime-boga {
     font-size: 80px;
-    font-family: var(--bold);
+    font-family: var(--zadebljanje);
     margin-left: 20px;
 }
 
-#header-god-title {
+#zaglavlje-naslov-boga {
     font-size: 30px;
-    font-family: var(--bold);
+    font-family: var(--zadebljanje);
     color: var(--gold);
     margin-left: 20px;
 }
 
-#container {
+#kontejner {
     margin-top: 20px;
     display: flex;
     justify-content: center;
@@ -27,15 +27,15 @@
 
 table {
     border-collapse: collapse;
-    background-color: var(--bg);
+    background-color: var(--pozadina);
     width: 1000px;
 }
 
-.ability {
+.sposobnost {
     width: 20%;
     padding: 10px;
     box-sizing: border-box;
-    font-family: var(--bold);
+    font-family: var(--zadebljanje);
     cursor: pointer;
     transition: background-color .1s;
     display: inline-flex; /*flex koji zauzima samo prostor sto mu je potreban*/
@@ -44,37 +44,37 @@ table {
     gap: 10px;
 }
 
-.ability:not(.ability-selected):hover {
+.sposobnost:not(.izabrana-sposobnost):hover {
     background-color: #20233a;
 }
 
-.ability-selected {
-    background-color: var(--menu-bg);
+.izabrana-sposobnost {
+    background-color: var(--meni-pozadina);
 }
 
-.ability-number {
+.broj-sposobnosti {
     font-size: 18px;
 }
 
-.ability-name {
-    color: var(--gold);
+.ime-sposobnosti {
+    color: var(--zlatna);
 }
 
-#name {
-    font-family: var(--bold);
+#ime {
+    font-family: var(--zadebljanje);
     font-size: 26px;
     padding: 10px;
 }
 
-.description {
+.opis {
     font-family: var(--font);
     display: none;
 }
 
-.description > td {
+.opis > td {
     padding: 0 10px;
 }
 
-.description-selected {
+.izabran-opis {
     display: table-row; /*<tr>*/
 }

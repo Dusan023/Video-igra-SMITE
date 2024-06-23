@@ -1,0 +1,68 @@
+#slajder {
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slajder-kutija {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    transition: left .8s;
+    cursor: pointer;
+}
+
+.slajder-kutija.pomeri-pozadinu {
+    background-position: top !important;
+}
+
+.slajder-kutija:first-child {
+    left: 0;
+}
+
+.slajder-kutija:last-child {
+    left: 100%;
+}
+
+.bez-tranzicije {
+    transition: none !important;
+}
+
+#tekst-ispod-slajdera {
+    background-color: var(--pozadina);
+    color: var(--boja);
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.4s, color 0.4s;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#tekst-ispod-slajdera h2 {
+    font-size: 40px;
+    font-family: var(--zadebljanje);
+    margin-bottom: 0px;
+    transition: color 0.4s;
+}
+
+#tekst-ispod-slajdera p {
+    font-size: 18px;
+    font-family: var(--font);
+    line-height: 1.6;
+    text-align: justify;
+    transition: color 0.4s;
+}
+
+#naslov {
+    font-size: 40px;
+    font-family: var(--zadebljanje);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}

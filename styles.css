@@ -1,4 +1,4 @@
-#container {
+#kontejner {
     display: flex;
     flex-direction: column;
     align-items: center; /*horizontalno*/
@@ -6,41 +6,35 @@
     gap: 80px; /*razmak izmedju elemenata flex-a*/
 }
 
-#title {
-    font-size: 100px;
-    font-family: var(--bold);
-    transition: color .4s;
-}
-
-#gods {
+#bogovi {
     display: flex;
     flex-direction: row;
     gap: 50px;
     justify-content: center; /*horizontalno*/
 }
 
-.god-holder {
+.bog-drzac {
     display: inline-block;
     position: relative;
     cursor: pointer;
     perspective: 800px; /*za 3d efekat kartice*/
 }
 
-.god-holder:hover .god-card {
+.bog-drzac:hover .karta-boga {
     transform: rotateX(30deg);
     box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .7); /*senka ispod kartice*/
 }
 
-.god-holder:hover .god-card::after {
+.bog-drzac:hover .karta-boga::after {
     opacity: 1;
 }
 
-.god-holder:hover .god-png {
+.bog-drzac:hover .bog-png {
     opacity: 1;
     bottom: 110px;
 }
 
-.god-holder:hover .god-name {
+.bog-drzac:hover .ime-boga {
     bottom: 85px;
 }
 
@@ -64,7 +58,7 @@
     background: linear-gradient(transparent 50%, black), url('images/cards/standard thor.jpg');
 }
 
-.god-card {
+.karta-boga {
     background-size: 318.75px 425px; 
     background-position: center;
     width: 300px;
@@ -74,7 +68,7 @@
     pointer-events: none;
 }
 
-.god-card::after {
+.karta-boga::after {
     content: ''; /*da bi ::after ili ::before element mogao da se koristi*/
     background: linear-gradient(black, transparent 50%); /*gradijent od 0% do 50% elementa*/
     width: 300px;
@@ -87,7 +81,7 @@
     transition: opacity .3s;
 }
 
-.god-png {
+.bog-png {
     height: 400px;
     background-position: bottom;
     background-size: contain;
@@ -126,10 +120,10 @@
     width: 400px;
 }
 
-.god-name {
+.ime-boga {
     font-size: 40px;
-    font-family: var(--bold);
-    color: var(--color); /*boja slova*/
+    font-family: var(--zadebljanje);
+    color: var(--boja); /*boja slova*/
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -138,7 +132,7 @@
     white-space: nowrap; /*sav tekst je u jednom redu; morao sam da dodam jer je PUCH od AH PUCH prelazilo u novi red*/
 }
 
-#box {
+#kutija {
     display: inline-block;
     width: 400px;
     border-radius: 10px;
@@ -146,14 +140,14 @@
     transition: .4s;
     display: flex;
     flex-direction: column;
-    background-color: var(--bg);
+    background-color: var(--pozadina);
     align-items: center;
     padding: 10px; /*unutrasnje margine; sa svih strana 10px*/
     box-sizing: border-box; /*da padding i border ne uticu na podesene dimenzije - u ovom slucaju nece biti sirine 422px nego ostaje 400px*/
     gap: 5px;
 }
 
-#box:hover {
+#kutija:hover {
     box-shadow: 0 10px 20px 0 black;
 }
 
@@ -163,15 +157,15 @@ input[type="text"] {
     padding: 2px 5px; /*gore i dole 2px levo i desno 5px; isto sto i 2px 5px 2px 5px (gore desno dole levo)*/
     box-sizing: border-box;
     width: 100%;
-    background-color: var(--menu-bg);
+    background-color: var(--meni-pozadina);
     outline: none;
-    color: var(--color);
+    color: var(--boja);
     font-family: var(--font);
     font-size: 22px;
     text-align: center;
 }
 
-.row {
+.red {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -183,7 +177,7 @@ label {
     font-family: var(--font);
 }
 
-.button {
+.dugme {
     font-family: var(--font);
     font-size: 22px;
     cursor: pointer;
@@ -193,6 +187,6 @@ label {
     transition: color .1s;
 }
 
-.button:hover {
-    color: var(--gold);
+.dugme:hover {
+    color: var(--zlatna);
 }
