@@ -35,7 +35,7 @@ const Podesavanje = slike => {
 }
 
 Podesavanje([
-    { slika: "images/slajder/slika1smite.jpg", link: 'page.html' },
-    { slika: "images/slajder/slika2smite.jpg", link: 'page.html', pomeri: true },
-    { slika: "images/zaglavlje.jpg", link: 'page1.html', pomeri: true }
+    { slika: "images/slajder/slika1smite.jpg", link: 'index.html' },
+    { slika: "images/slajder/slika2smite.jpg", link: 'index.html', pomeri: true },
+    { slika: "images/zaglavlje.jpg", link: 'cernobog.html', pomeri: true }
 ])
