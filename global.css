@@ -9,7 +9,6 @@
 }
 
 :root {
-    /*ovde se cuvaju varijable; imenuvanje i lako menjanje*/
     --font: 'regular';
     --zadebljanje: 'bold italic';
     --zlatna: #9F9160;
@@ -24,7 +23,6 @@ body {
     overflow-x: hidden;
     color: var(--boja);
     user-select: none;
-    /*da elementi ne bi mogli da se vuku i onda ne izgleda tako lepo; tekst takodje ne moze da se slektuje*/
     transition: background-color .4s;
 }
 
@@ -73,18 +71,15 @@ body {
 
 .meni-stavka a {
     color: var(--boja);
-    /* bela boja za linkove gggggggg*/
     text-decoration: none;
 }
 
 .meni-stavka a:visited {
     color: var(--boja);
-    /* bela boja za posećene linkovegggggggggg */
 }
 
 a:link {
     text-decoration: none;
-    /*da ne bi bilo text-decoration: underline, sto je default za linkove*/
     cursor: default;
 }
 

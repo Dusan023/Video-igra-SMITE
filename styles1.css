@@ -1,9 +1,9 @@
 #zaglavlje {
     background: url('images/zaglavlje.jpg');
-    background-size: 100% auto; /*sirina je 100% a visina auto -> odrzava se odnos*/
+    background-size: 100% auto;
     width: 100%;
-    height: 20vw; /*20% sirine vidljivog dela stranice*/
-    overflow: hidden; /*sakrij sve sto prelazi granice ovog elementa*/
+    height: 20vw;
+    overflow: hidden;
 }
 
 #zaglavlje-ime-boga {
@@ -38,7 +38,7 @@ table {
     font-family: var(--zadebljanje);
     cursor: pointer;
     transition: background-color .1s;
-    display: inline-flex; /*flex koji zauzima samo prostor sto mu je potreban*/
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
@@ -76,5 +76,5 @@ table {
 }
 
 .izabran-opis {
-    display: table-row; /*<tr>*/
+    display: table-row;
 }

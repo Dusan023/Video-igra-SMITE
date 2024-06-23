@@ -1,28 +1,28 @@
 #kontejner {
     display: flex;
     flex-direction: column;
-    align-items: center; /*horizontalno*/
-    margin-top: 50px; /*pomeranje na dole za 50px prvog elementa*/
-    gap: 80px; /*razmak izmedju elemenata flex-a*/
+    align-items: center;
+    margin-top: 50px;
+    gap: 80px;
 }
 
 #bogovi {
     display: flex;
     flex-direction: row;
     gap: 50px;
-    justify-content: center; /*horizontalno*/
+    justify-content: center;
 }
 
 .bog-drzac {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    perspective: 800px; /*za 3d efekat kartice*/
+    perspective: 800px;
 }
 
 .bog-drzac:hover .karta-boga {
     transform: rotateX(30deg);
-    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .7); /*senka ispod kartice*/
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .7);
 }
 
 .bog-drzac:hover .karta-boga::after {
@@ -63,21 +63,21 @@
     background-position: center;
     width: 300px;
     height: 400px;
-    border-radius: 10px; /*zakrivljenje uglova kartice*/
+    border-radius: 10px;
     transition: .4s;
     pointer-events: none;
 }
 
 .karta-boga::after {
-    content: ''; /*da bi ::after ili ::before element mogao da se koristi*/
-    background: linear-gradient(black, transparent 50%); /*gradijent od 0% do 50% elementa*/
+    content: '';
+    background: linear-gradient(black, transparent 50%);
     width: 300px;
     height: 400px;
     position: absolute;
     left: 0;
     top: 0;
     border-radius: 10px;
-    opacity: 0; /*ne vidi se ali zauzima prostor*/
+    opacity: 0;
     transition: opacity .3s;
 }
 
@@ -89,7 +89,7 @@
     position: absolute;
     bottom: 50px;
     left: 50%;
-    transform: translateX(-50%); /*pomeranje za 50% (od sopstvene sirine) ulevo*/
+    transform: translateX(-50%);
     opacity: 0;
     transition: .5s;
     pointer-events: none;
@@ -97,7 +97,7 @@
 
 .bakasura-png {
     background-image: url('images/pngs/bakasura.png');
-    width: 350px; /*stavljao sam razlicite sirine da bi se png svakog lika dobro video posto su neki siri*/
+    width: 350px;
 }
 
 .chernobog-png {
@@ -123,13 +123,13 @@
 .ime-boga {
     font-size: 40px;
     font-family: var(--zadebljanje);
-    color: var(--boja); /*boja slova*/
+    color: var(--boja);
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     transition: .5s;
-    white-space: nowrap; /*sav tekst je u jednom redu; morao sam da dodam jer je PUCH od AH PUCH prelazilo u novi red*/
+    white-space: nowrap;
 }
 
 #kutija {
@@ -142,8 +142,8 @@
     flex-direction: column;
     background-color: var(--pozadina);
     align-items: center;
-    padding: 10px; /*unutrasnje margine; sa svih strana 10px*/
-    box-sizing: border-box; /*da padding i border ne uticu na podesene dimenzije - u ovom slucaju nece biti sirine 422px nego ostaje 400px*/
+    padding: 10px;
+    box-sizing: border-box;
     gap: 5px;
 }
 
@@ -154,7 +154,7 @@
 input[type="text"] {
     border: none;
     border-radius: 5px;
-    padding: 2px 5px; /*gore i dole 2px levo i desno 5px; isto sto i 2px 5px 2px 5px (gore desno dole levo)*/
+    padding: 2px 5px;
     box-sizing: border-box;
     width: 100%;
     background-color: var(--meni-pozadina);
